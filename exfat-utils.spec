@@ -1,17 +1,16 @@
 Summary:	Utilities for exFAT filesystem
 Summary(pl.UTF-8):	Narzędzia do systemu plików exFAT
 Name:		exfat-utils
-Version:	0.9.4
+Version:	0.9.5
 Release:	1
 License:	GPL v3+
 Group:		Applications/System
 #Source0Download: http://code.google.com/p/exfat/downloads/list
 Source0:	http://exfat.googlecode.com/files/%{name}-%{version}.tar.gz
-# Source0-md5:	678ad6e34e99464087b829a37acfa7b0
+# Source0-md5:	22c6808089739e0b7aef90f95f8eae48
 URL:		http://code.google.com/p/exfat/
 BuildRequires:	rpmbuild(macros) >= 1.385
 BuildRequires:	scons
-BuildRequires:	sed >= 4.0
 Conflicts:	fuse-exfat < 0.9.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -30,9 +29,6 @@ Obecny status tego projektu to beta.
 
 %prep
 %setup -q
-
-# libfuse not used in -utils
-sed -i -e "s/, 'fuse'//" SConstruct
 
 %build
 %scons
