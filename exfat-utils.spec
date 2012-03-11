@@ -1,13 +1,13 @@
 Summary:	Utilities for exFAT filesystem
 Summary(pl.UTF-8):	Narzędzia do systemu plików exFAT
 Name:		exfat-utils
-Version:	0.9.6
+Version:	0.9.7
 Release:	1
 License:	GPL v3+
 Group:		Applications/System
 #Source0Download: http://code.google.com/p/exfat/downloads/list
 Source0:	http://exfat.googlecode.com/files/%{name}-%{version}.tar.gz
-# Source0-md5:	6722b7a919b4924bc64f86bccfedb0a6
+# Source0-md5:	1bd94db19fc556701b16a66f6291b4ca
 URL:		http://code.google.com/p/exfat/
 BuildRequires:	rpmbuild(macros) >= 1.385
 BuildRequires:	scons
