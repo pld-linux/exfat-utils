@@ -1,13 +1,13 @@
 Summary:	Utilities for exFAT filesystem
 Summary(pl.UTF-8):	Narzędzia do systemu plików exFAT
 Name:		exfat-utils
-Version:	0.9.8
+Version:	1.0.0
 Release:	1
 License:	GPL v3+
 Group:		Applications/System
 #Source0Download: http://code.google.com/p/exfat/downloads/list
 Source0:	http://exfat.googlecode.com/files/%{name}-%{version}.tar.gz
-# Source0-md5:	a14c4bab6920121c874f448b5bfe4017
+# Source0-md5:	1fdedea76fc660c432594a27f10ee74b
 URL:		http://code.google.com/p/exfat/
 BuildRequires:	rpmbuild(macros) >= 1.385
 BuildRequires:	scons
@@ -18,14 +18,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This project aims to provide a full-featured exFAT file system
 implementation for Linux and other Unix-like systems as a FUSE module.
 
-Current status of the project is beta.
-
 %description -l pl.UTF-8
 Celem tego projektu jest umożliwienie pełnego dostępu do systemu
 plików exFAT z poziomu Linuksa i innych systemów uniksowych poprzez
 moduł FUSE.
-
-Obecny status tego projektu to beta.
 
 %prep
 %setup -q
