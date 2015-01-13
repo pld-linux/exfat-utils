@@ -2,7 +2,7 @@ Summary:	Utilities for exFAT filesystem
 Summary(pl.UTF-8):	Narzędzia do systemu plików exFAT
 Name:		exfat-utils
 Version:	1.0.1
-Release:	1
+Release:	2
 License:	GPL v3+
 Group:		Applications/System
 #Source0Download: http://code.google.com/p/exfat/downloads/list
@@ -11,6 +11,7 @@ Source0:	http://exfat.googlecode.com/files/%{name}-%{version}.tar.gz
 URL:		http://code.google.com/p/exfat/
 BuildRequires:	rpmbuild(macros) >= 1.385
 BuildRequires:	scons
+Suggests:	fuse-exfat
 Conflicts:	fuse-exfat < 0.9.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -31,17 +32,16 @@ moduł FUSE.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 %scons install \
 	DESTDIR=$RPM_BUILD_ROOT/sbin
 
 install -d $RPM_BUILD_ROOT%{_mandir}/man8
-install dump/dumpexfat.8 \
+cp -p dump/dumpexfat.8 \
 	fsck/exfatfsck.8 \
 	label/exfatlabel.8 \
 	mkfs/mkexfatfs.8 $RPM_BUILD_ROOT%{_mandir}/man8
-echo '.so exfatfsck.8' >$RPM_BUILD_ROOT%{_mandir}/man8/fsck.exfat.8
-echo '.so mkexfatfs.8' >$RPM_BUILD_ROOT%{_mandir}/man8/mkfs.exfat.8
+echo '.so man8/exfatfsck.8' >$RPM_BUILD_ROOT%{_mandir}/man8/fsck.exfat.8
+echo '.so man8/mkexfatfs.8' >$RPM_BUILD_ROOT%{_mandir}/man8/mkfs.exfat.8
 
 %clean
 rm -rf $RPM_BUILD_ROOT
