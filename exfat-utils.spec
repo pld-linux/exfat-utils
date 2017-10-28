@@ -1,13 +1,13 @@
 Summary:	Utilities for exFAT filesystem
 Summary(pl.UTF-8):	Narzędzia do systemu plików exFAT
 Name:		exfat-utils
-Version:	1.2.6
+Version:	1.2.7
 Release:	1
 License:	GPL v2+
 Group:		Applications/System
 #Source0Download: https://github.com/relan/exfat/releases
 Source0:	https://github.com/relan/exfat/releases/download/v%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	5367f06a1540eecf4f94c2119cdbd924
+# Source0-md5:	c70d295a9a2e4ec16af21c0b7d02743c
 URL:		https://github.com/relan/exfat
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.11.2
