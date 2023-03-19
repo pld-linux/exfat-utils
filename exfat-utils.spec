@@ -1,13 +1,13 @@
 Summary:	Utilities for exFAT filesystem
 Summary(pl.UTF-8):	Narzędzia do systemu plików exFAT
 Name:		exfat-utils
-Version:	1.3.0
+Version:	1.4.0
 Release:	1
 License:	GPL v2+
 Group:		Applications/System
 #Source0Download: https://github.com/relan/exfat/releases
 Source0:	https://github.com/relan/exfat/releases/download/v%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	f8928571b152455e828ca0bd42af8b73
+# Source0-md5:	2e33fc2d291ca5632218561b3ca2570b
 URL:		https://github.com/relan/exfat
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.11.2
@@ -54,12 +54,14 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog README
 %attr(755,root,root) /sbin/dumpexfat
+%attr(755,root,root) /sbin/exfatattrib
 %attr(755,root,root) /sbin/exfatfsck
 %attr(755,root,root) /sbin/exfatlabel
 %attr(755,root,root) /sbin/fsck.exfat
 %attr(755,root,root) /sbin/mkexfatfs
 %attr(755,root,root) /sbin/mkfs.exfat
 %{_mandir}/man8/dumpexfat.8*
+%{_mandir}/man8/exfatattrib.8*
 %{_mandir}/man8/exfatfsck.8*
 %{_mandir}/man8/exfatlabel.8*
 %{_mandir}/man8/fsck.exfat.8*
